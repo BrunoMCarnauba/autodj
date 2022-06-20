@@ -1,6 +1,6 @@
 # AutoDJ Amazon Music
 
-Essa aplicação automatiza a reprodução de playlists na Amazon Music. Você informa para o sistema as playlists que deseja reproduzir e o tempo que ela deve ser reproduzida para passar para a próxima, e o sistema se encarrega de fazer essa mudança. Pode ser útil para um evento em que precise deixar o som ligado sem supervisão com uma variedade de playlists. Está em uma versão muito inicial, sem interface gráfica e sem tratamentos de erros. Abaixo há um trecho com algumas coisas que faltam ser implementadas.
+Essa aplicação automatiza a reprodução de playlists na Amazon Music. Você informa para o sistema as playlists que deseja reproduzir e o tempo que ela deve ser reproduzida para passar para a próxima, e o sistema se encarrega de fazer essa mudança. Pode ser útil para um evento em que precise deixar o som ligado sem supervisão com uma variedade de playlists. Também é possível definir um filtro com palavras proibidas, para caso a música apresente alguma daquelas palavras, ele passe para a próxima música. Está em uma versão muito inicial, sem interface gráfica e sem tratamentos de erros. Abaixo há um trecho com algumas coisas que faltam ser implementadas.
 
 ## Tecnologia
 
@@ -26,18 +26,18 @@ Para iniciar a aplicação.
 
 ## Como usar
 
-Após fazer a configuração e iniciar a aplicação como informado acima, o programa irá abrir o navegador na página de login da amazon music. Faça o login e volte para o terminal para apertar a teclar "Enter". Após isso, o programa inicia suas atividades.
+Após fazer a configuração e iniciar a aplicação como informado acima, o programa irá abrir o navegador na página de login da amazon music. Após fazer o login, o programa automaticamente inicia suas atividades.
 
 ## O que falta?
 
-- Clonar data-profile para evitar erro caso já tenha um chrome aberto: https://forum.katalon.com/t/user-data-directory-is-already-in-use/40266/2 <br/>
-- Colocar para tocar vinhetas durante a reprodução da playlist <br/>
-- Fechar automaticamente o diálogo do Amazon Music Unlimited caso ele apareça, após fazer o login <br/>
-- Criar filtro para evitar músicas explícitas (que contém palavrão) checando os `<li>` da tag com a classe "_3Hi7RFzTbGNdeY-tVNPCKc" <br/>
-- Tratar possíveis exceções que podem acontecer pelo Selenium <br/>
-- Criar uma interface para configuração das playlists <br/>
-- Trocar de playlist apenas quando acabar a música da que está em reprodução <br/>
+- Reproduzir musicas genericas enquanto estiver mudo por ter detectado palavra proibida e não conseguir passar de faixa por não ter amazon unlimited <br/>
+- Colocar possibilidade de tocar vinhetas de forma automática durante a reprodução da playlist <br/>
+- Criar função de auto-duck in real time para que diminua o volume do chrome automaticamente caso determinado volume seja alcançado pelo microfone <br/>
 - Melhorar organização do código <br/>
+- Tratar possíveis exceções que podem acontecer pelo Selenium, para tentar ao máximo fazer com que o programa não pare <br/>
+- Fechar automaticamente o diálogo do Amazon Music Unlimited caso ele apareça, após fazer o login <br/>
+- Trocar de playlist apenas quando acabar a música da que está em reprodução <br/>
+- Criar uma interface para configuração das playlists <br/>
 
 ## Links que podem ser úteis
 
